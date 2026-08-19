@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Mathe
@@ -65,18 +65,18 @@ public class Reserva {
 
     public void crearReserva() {
         estado = "Pendiente";
-        System.out.println("Reserva #" + idReserva + " creada para " + usuario.getNombre()
-                + " en " + cancha.getNombre() + ".");
+        JOptionPane.showMessageDialog(null, "Reserva #" + idReserva + " creada para " + usuario.getNombre()
+                                      + " en " + cancha.getNombre() + ".");
   }
 
     public void cancelarReserva() {
         estado = "Cancelada";
-        System.out.println("Reserva #" + idReserva + " cancelada.");
+        JOptionPane.showMessageDialog(null, "Reserva #" + idReserva + " cancelada.");
      }
 
     public void confirmarReserva() {
         estado = "Confirmada";
-        System.out.println("Reserva #" + idReserva + " confirmada.");
+        JOptionPane.showMessageDialog(null, "Reserva #" + idReserva + " confirmada.");
     }}
     
 

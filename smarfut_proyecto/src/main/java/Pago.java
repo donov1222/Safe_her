@@ -1,12 +1,12 @@
 /**
- * Clase que representa el pago asociado a una reserva.
+ * 
  */
 public class Pago {
 
     private int idPago;
     private double monto;
     private String metodoPago;
-    private String estadoPago; // "Pendiente" o "Confirmado"
+    private String estadoPago; 
     private Reserva reserva;
 
     public Pago(int idPago, double monto, String metodoPago, Reserva reserva) {
@@ -37,7 +37,6 @@ public class Pago {
         return reserva;
     }
 
-    // Procesa el pago (en este avance solo se marca como realizado)
     public boolean realizarPago() {
         this.estadoPago = "Realizado";
         return true;

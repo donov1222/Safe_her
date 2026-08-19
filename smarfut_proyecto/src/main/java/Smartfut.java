@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Smartfut {
   private Usuario[] listaUsuarios;
     private int cantidadUsuarios;
@@ -14,7 +16,7 @@ public class Smartfut {
     }
 
     public void iniciarSistema() {
-        System.out.println("===== BIENVENIDO A SMARTFUT =====");
+        JOptionPane.showMessageDialog(null, "===== BIENVENIDO A SMARTFUT =====");
     }
 
     public static void main(String[] args) {

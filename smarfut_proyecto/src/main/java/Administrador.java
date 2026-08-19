@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Mathe
@@ -12,13 +12,13 @@ public class Administrador {
      private int idAdministrador;
     private String nombre;
     private String usuario;
-    private String contraseña;
+    private String contrasenha;
 
-    public Administrador(int idAdministrador, String nombre, String usuario, String contraseña) {
+    public Administrador(int idAdministrador, String nombre, String usuario, String contrasenha) {
         this.idAdministrador = idAdministrador;
         this.nombre = nombre;
         this.usuario = usuario;
-        this.contraseña = contraseña;
+        this.contraseña = contrasenha;
     }
 
     public int getIdAdministrador() {
@@ -45,21 +45,21 @@ public class Administrador {
         this.usuario = usuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenha() {
+        return contrasenha;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenha(String contrasenha) {
+        this.contrasenha = contrasenha;
     }
     
     public int agregarCancha(Cancha[] listaCanchas, int cantidadActual, Cancha nuevaCancha) {
         if (cantidadActual < listaCanchas.length) {
             listaCanchas[cantidadActual] = nuevaCancha;
-            System.out.println("Cancha agregada correctamente: " + nuevaCancha.getNombre());
+            JOptionPane.showMessageDialog(null, "Cancha agregada correctamente: " + nuevaCancha.getNombre());
             return cantidadActual + 1;} 
         else {
-            System.out.println("No hay espacio para agregar mas canchas.");
+            JOptionPane.showMessageDialog(null, "No hay espacio para agregar mas canchas.");
             return cantidadActual;}
       }
      
@@ -73,7 +73,7 @@ public class Administrador {
         }
 
         if (posicion == -1) {
-            System.out.println("No se encontro una cancha con ese ID.");
+            JOptionPane.showMessageDialog(null, "No se encontro una cancha con ese ID.");
             return cantidadActual;}
         else {
             int j = posicion;
@@ -81,7 +81,7 @@ public class Administrador {
                 listaCanchas[j] = listaCanchas[j + 1];
                 j = j + 1;
             }
-            System.out.println("Cancha eliminada correctamente.");
+            JOptionPane.showMessageDialog(null, "Cancha eliminada correctamente.");
             return cantidadActual - 1;
         }
        }

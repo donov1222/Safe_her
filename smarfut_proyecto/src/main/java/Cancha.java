@@ -69,6 +69,6 @@ private int idCancha;
 
     public void cambiarEstado() {
         disponible = !disponible;
-        System.out.println("El estado de la cancha " + nombre + " cambio.");
+        JOptionPane.showMessageDialog(null, "El estado de la cancha " + nombre + " cambio.");
     }    
 }

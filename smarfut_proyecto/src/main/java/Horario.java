@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Horario {
  private String fecha;
     private String horaInicio;
@@ -35,15 +37,15 @@ public class Horario {
 
     public boolean verificarDisponibilidad(String fechaSolicitada, String horaSolicitada) {
         if (fecha.equals(fechaSolicitada) && horaInicio.equals(horaSolicitada)) {
-            System.out.println("El horario esta disponible.");
+            JOptionPane.showMessageDialog(null, "El horario esta disponible.");
             return true;
         } else {
-            System.out.println("El horario no esta disponible.");
+            JOptionPane.showMessageDialog(null, "El horario no esta disponible.");
             return false;
         }
     }
 
     public void mostrarHorario() {
-        System.out.println("Fecha: " + fecha + " | Inicio: " + horaInicio + " | Fin: " + horaFin);
+        JOptionPane.showMessageDialog(null, "Fecha: " + fecha + " | Inicio: " + horaInicio + " | Fin: " + horaFin);
     }   
 }

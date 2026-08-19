@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Usuario {
    private int idUsuario;
     private String nombre;
@@ -44,15 +46,15 @@ public class Usuario {
     }
 
     public void registrarse() {
-        System.out.println("Usuario registrado: " + nombre);
+       JOptionPane.showMessageDialog(null, "Usuario registrado: " + nombre);
     }
 
     public boolean iniciarSesion(String correoIngresado) {
         if (correo.equals(correoIngresado)) {
-            System.out.println("Sesion iniciada correctamente.");
+            JOptionPane.showMessageDialog(null, "Sesion iniciada correctamente.");
             return true;
         } else {
-            System.out.println("Correo incorrecto.");
+            JOptionPane.showMessageDialog(null, "Correo incorrecto.");
             return false;
         }
     }
@@ -60,6 +62,6 @@ public class Usuario {
     public void actualizarDatos(String nuevoTelefono, String nuevoCorreo) {
         telefono = nuevoTelefono;
         correo = nuevoCorreo;
-        System.out.println("Datos actualizados correctamente.");
+        JOptionPane.showMessageDialog(null, "Datos actualizados correctamente.");
     } 
 }

@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Cancha {
 private int idCancha;
     private String nombre;
@@ -54,14 +56,14 @@ private int idCancha;
     }
 
     public void mostrarInformacion() {
-        System.out.println("Cancha #" + idCancha + " - " + nombre);
-        System.out.println("Tipo: " + tipo);
-        System.out.println("Precio por hora: " + precioHora);
+        JOptionPane.showMessageDialog(null, "Cancha#" + idCancha + " - " + nombre +
+                                      "\nTipo: " + tipo +
+                                      "\nPrecio por hora: " + precioHora);
 
         if (disponible) {
-            System.out.println("Estado: Disponible");
+           JOptionPane.showMessageDialog(null, "Estado: Disponible");
         } else {
-            System.out.println("Estado: No disponible");
+            JOptionPane.showMessageDialog(null, "Estado: No disponible");
         }
     }
 

@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  */
 public class Administrador {
     
-     private int idAdministrador;
+    private int idAdministrador;
     private String nombre;
     private String usuario;
     private String contrasenha;

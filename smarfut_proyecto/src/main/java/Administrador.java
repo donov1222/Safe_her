@@ -84,6 +84,6 @@ public class Administrador {
             JOptionPane.showMessageDialog(null, "Cancha eliminada correctamente.");
             return cantidadActual - 1;
         }
-       }
+       } 
 }
 
